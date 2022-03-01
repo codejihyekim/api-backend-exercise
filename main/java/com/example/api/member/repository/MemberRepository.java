@@ -1,6 +1,7 @@
 package com.example.api.member.repository;
 
 import com.example.api.member.domain.CalcDTO;
+import com.example.api.member.domain.MemberDTO;
 
 /**
  * packageName: com.example.api.member.repository
@@ -16,4 +17,10 @@ import com.example.api.member.domain.CalcDTO;
 public interface MemberRepository {
 
     String calc(CalcDTO calc);
+
+    String bmi(MemberDTO bmi);
+
+    String grade(MemberDTO grade);
+
+    String login(MemberDTO login);
 }

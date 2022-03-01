@@ -1,6 +1,7 @@
 package com.example.api.member.repository;
 
 import com.example.api.member.domain.CalcDTO;
+import com.example.api.member.domain.MemberDTO;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -18,6 +19,21 @@ import org.springframework.stereotype.Repository;
 public class MemberRepositoryImpl implements MemberRepository{
     @Override
     public String calc(CalcDTO calc) {
+        return null;
+    }
+
+    @Override
+    public String bmi(MemberDTO bmi) {
+        return null;
+    }
+
+    @Override
+    public String grade(MemberDTO grade) {
+        return null;
+    }
+
+    @Override
+    public String login(MemberDTO login) {
         return null;
     }
 }

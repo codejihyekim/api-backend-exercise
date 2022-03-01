@@ -1,6 +1,7 @@
 package com.example.api.member.controller;
 
 import com.example.api.member.domain.CalcDTO;
+import com.example.api.member.domain.MemberDTO;
 import com.example.api.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,8 +27,20 @@ public class MemberController {
 
     private final MemberService service;
 
+    @PostMapping("/grade")
+    public String grade(@RequestBody MemberDTO grade){
+        return service.grade(grade);
+    }
+    @PostMapping("/bmi")
+    public String bmi(@RequestBody MemberDTO bmi){
+        return service.bmi(bmi);
+    }
     @PostMapping("/calc")
     public String calc(@RequestBody CalcDTO calc){
         return service.calc(calc);
+    }
+    @PostMapping("/login")
+    public String login(@RequestBody MemberDTO login){
+        return service.login(login);
     }
 }
